@@ -13,8 +13,6 @@ const Container = styled.div`
 
 const Uploader = ({imgData}) => {
 
-    const [imgPath, setImgPath] = useState("");
-
     const props = {
         name: 'photo',
         multiple: false,
@@ -28,7 +26,6 @@ const Uploader = ({imgData}) => {
             if (status === 'done') {
                 message.success(`${info.file.name} file uploaded successfully.`);
                 // set parent value to info.file.name
-                setImgPath(info.file.name);
                 imgData(info.file.name);
 
             } else if (status === 'error') {
