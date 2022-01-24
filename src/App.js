@@ -5,6 +5,7 @@ import Uploader from './components/Uploader';
 import "antd/dist/antd.css";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import testImg from "./assets/uploads/gallery-1.jpg";
 
 function App() {
 
@@ -108,7 +109,7 @@ function App() {
                 <h3>Name: {val.name}</h3>
                 <h3>Description: {val.description}</h3>
                 <h3>Price: ${val.price}</h3>
-                <img src={val.imgPath} alt={val.imgPath}/>
+                <img src={require(`./assets/uploads/${val.imgPath}`)} alt={val.imgPath}/>
               </div>
               <div>
                   <input
